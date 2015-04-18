@@ -7,7 +7,7 @@
 
         <h2 class="post-title"> {{ page.title }} </h2>
         <h3 class="post-subtitle"> <a href="{{ url_for("page", path=page.path) }}"> {{ page.meta.summary }} </a> </h3>
-        <p class="post-meta">Published on {{ page.meta.published }}
+        <p class="post-meta">Published on {{ page.meta.published.strftime('%Y/%m/%d') }}
             {% if page.meta.tags|length %}
                 , under <b>tags:</b>
                 {% for page_tag in page.meta.tags %}
