@@ -82,10 +82,12 @@
     </header>
 
     <!-- Main Content -->
-    {% block content %}
-    <div class="container">
+   <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+                {% block content %}
+
                 <div class="post-preview">
                     <a href="post.html">
                         <h2 class="post-title">
@@ -97,7 +99,9 @@
                     </a>
                     <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
                 </div>
+
                 <hr>
+
                 <div class="post-preview">
                     <a href="post.html">
                         <h2 class="post-title">
@@ -106,7 +110,9 @@
                     </a>
                     <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 18, 2014</p>
                 </div>
+
                 <hr>
+
                 <div class="post-preview">
                     <a href="post.html">
                         <h2 class="post-title">
@@ -118,7 +124,9 @@
                     </a>
                     <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2014</p>
                 </div>
+
                 <hr>
+
                 <div class="post-preview">
                     <a href="post.html">
                         <h2 class="post-title">
@@ -130,18 +138,22 @@
                     </a>
                     <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on July 8, 2014</p>
                 </div>
+
                 <hr>
+
                 <!-- Pager -->
                 <ul class="pager">
                     <li class="next">
                         <a href="#">Older Posts &rarr;</a>
                     </li>
                 </ul>
+        
+                {% endblock content %}
+
             </div>
         </div>
     </div>
-    {% endblock content %}
-
+    
     <hr>
 
     <!-- Footer -->
