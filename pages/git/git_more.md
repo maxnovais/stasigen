@@ -1,7 +1,9 @@
 title: Git cheatsheet
 date: 2015-04-18
 tags: [git]
-
+published: 2015-04-08
+summary: Many practical git notes.
+public: yes
 
 Git:
 

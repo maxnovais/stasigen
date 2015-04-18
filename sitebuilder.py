@@ -15,6 +15,12 @@ freezer = Freezer(app)
 
 @app.route("/")
 def index():
+    '''
+    print "------"
+    for p in pages:
+        print repr(p.meta)
+    print "------"
+    '''
     return render_template('index.html', pages=pages)
 
 
@@ -34,9 +40,10 @@ def tag(tag):
 def tags():
     tags_list = []
     for p in pages:
-        page_tags = p.meta.get('tags', [])
-        for t in page_tags:
-            tags_list.append(t)
+        if p.meta['public']:
+            page_tags = p.meta.get('tags', [])
+            for t in page_tags:
+                tags_list.append(t)
     unique_tags = sorted(set(tags_list))
     return render_template('tags.html', all_tags=unique_tags)
 

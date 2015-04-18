@@ -1,9 +1,11 @@
 title: siege study notes
 date: 2015-04-18
 tags: [siege, ops]
+published: 2015-04-18
+summary: This is some boostrapped documentation about siege (a tool to benchmark web apps).
+public: yes
 
-
-- Sieging the Site
+# Sieging the Site
 
 One thing we’ve gotten better at as a result of You Rather’s traffic is testing our apps under heavy load. On any given day, we’ve experienced large traffic spikes due to social media, aggregators (see: the Slashdot effect), or App Store features. Two tools we use a lot to test load handling are
 

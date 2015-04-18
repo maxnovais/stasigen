@@ -1,6 +1,9 @@
 title: ipython notebook study notes
 date: 2015-04-18
 tags: [python, ipython_notebook]
+published: 2015-04-18 
+summary: Those are my study notes on ipython notebook. 
+public: no
 
 
 https://github.com/tiagoprn/pyconnz2013talk

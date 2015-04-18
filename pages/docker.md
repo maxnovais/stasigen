@@ -1,7 +1,9 @@
 title: Docker study notes
 date: 2015-04-18
 tags: [docker]
-
+published: 2015-04-18
+summary: Those are my personal docker study notes. 
+public: yes
 
 ****Best definition of what is docker:
 
