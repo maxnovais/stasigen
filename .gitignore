@@ -1,0 +1,6 @@
+*~
+*.pyc
+*.BAK
+*.OLD
+virtualenv/
+
