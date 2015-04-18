@@ -1,6 +1,6 @@
 -r requirements.txt
 # below are for the vim plugins to work
-rope
+# rope
 ropevim
 powerline-status
 # below are other dev packages
