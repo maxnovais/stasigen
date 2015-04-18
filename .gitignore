@@ -3,4 +3,5 @@
 *.BAK
 *.OLD
 virtualenv/
+tmp/
 
