@@ -4,20 +4,19 @@
     <hr>
 
     <div class="post-preview">
-        <h2 class="post-title">
-            <a href="{{ url_for("page", path=page.path) }}">{{ page.title }}</a>
-        </h2>
-        <p class="post-meta"> <i>{{ page.meta.summary }}</i> </p>
-        <p class="post-meta">Published on {{ page.meta.published  }}</p>
-        <p class="post-meta">
-           {% if page.meta.tags|length %}
-                <b>Tags:</b>
+
+        <h2 class="post-title"> {{ page.title }} </h2>
+        <h3 class="post-subtitle"> <a href="{{ url_for("page", path=page.path) }}"> {{ page.meta.summary }} </a> </h3>
+        <p class="post-meta">Published on {{ page.meta.published }}
+            {% if page.meta.tags|length %}
+                , under <b>tags:</b>
                 {% for page_tag in page.meta.tags %}
                 <a href="{{ url_for("tag", tag=page_tag) }}"> <b>{{ page_tag }}</b> </a>
                 {% endfor %}
             {% endif %}
         </p>
-   </div>
+
+    </div>
     {% endif %}
 
 {% else %}
