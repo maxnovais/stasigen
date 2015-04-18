@@ -55,7 +55,7 @@
                         <a href="{{ url_for("index") }}"> INDEX </a>
                     </li>
                     <li>
-                        <a href="#">TAGS</a>
+                        <a href="{{ url_for("tags") }}">TAGS</a>
                     </li>
                 </ul>
             </div>
@@ -87,7 +87,7 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
                 {% block content %}
-
+                <!--
                 <div class="post-preview">
                     <a href="post.html">
                         <h2 class="post-title">
@@ -141,13 +141,12 @@
 
                 <hr>
 
-                <!-- Pager -->
                 <ul class="pager">
                     <li class="next">
                         <a href="#">Older Posts &rarr;</a>
                     </li>
                 </ul>
-        
+                -->
                 {% endblock content %}
 
             </div>
