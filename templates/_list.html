@@ -1,16 +1,25 @@
-<ul>
 {% for page in pages %}
-    <li>
-        <a href="{{ url_for("page", path=page.path) }}">{{ page.title }}</a>
-        {% if page.meta.tags|length %}
-            | Tagged:
-            {% for page_tag in page.meta.tags %}
-                <a href="{{ url_for("tag", tag=page_tag) }}">{{ page_tag }}</a>
-            {% endfor %}
-        {% endif %}
-    </li>
+
+    <hr>
+
+    <div class="post-preview">
+        <a href="post.html">
+            <h2 class="post-title">
+                <a href="{{ url_for("page", path=page.path) }}">{{ page.title }}</a>
+            </h2>
+            <h3 class="post-subtitle">
+                {% if page.meta.tags|length %}
+                    <b>Tags:</b>
+                    {% for page_tag in page.meta.tags %}
+                        <a href="{{ url_for("tag", tag=page_tag) }}">{{ page_tag }}</a>
+                    {% endfor %}
+                {% endif %}
+            </h3>
+        </a>
+        <p class="post-meta">Posted on {{ page.meta.date  }}</p>
+    </div>
+
 {% else %}
-    <li>No page.</li>
+    <h3>No content.</h3>
 {% endfor %}
-</ul>
 
