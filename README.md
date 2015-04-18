@@ -4,6 +4,11 @@ A simple static site generator.
 
 It is based on initial work by Nicolas, at: https://nicolas.perriault.net/code/2012/dead-easy-yet-powerful-static-website-generator-with-flask/ .
 
+Also powered the amazing flask extensions below:
+    https://pythonhosted.org/Flask-FlatPages/
+    http://pythonhosted.org/Frozen-Flask/
+
+
 ## How to use:
 
 - To add content to the site, add markdown files with the extension '.md' to the "pages" directory. 
