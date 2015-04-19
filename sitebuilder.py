@@ -13,6 +13,12 @@ app.config.from_object(__name__)
 pages = FlatPages(app)
 freezer = Freezer(app)
 
+'''
+IMPORTANT: when building new routes, certify all of them end with a trailing
+slash ('/'). Otherwise, when you run the build, Flask-Frozen will complain
+about a MimetypeMismatchWarning between text/html and application/octet-stream.
+'''
+
 @app.route("/")
 def index():
     '''
@@ -36,7 +42,7 @@ def tag(tag):
     return render_template('tag.html', pages=tagged, tag=tag)
 
 
-@app.route('/tags')
+@app.route('/tags/')
 def tags():
     tags_list = []
     for p in pages:
@@ -50,6 +56,8 @@ def tags():
 
 if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == "build":
+        app.debug = True
+        app.testing = True
         freezer.freeze()
     else:
         app.run(port=8000)
