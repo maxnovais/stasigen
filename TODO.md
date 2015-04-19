@@ -1,0 +1,3 @@
+- Pagination
+- Create a make file instead of the 2 "serve*" bash scripts. 
+-
