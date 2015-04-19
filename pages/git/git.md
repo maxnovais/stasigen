@@ -3,7 +3,7 @@ date: 2015-04-18
 tags: [git]
 published: 2015-04-18 
 summary: Some notes on git I have collected through the years.
-public: no
+public: yes
 
 Git Merge VS Rebase
 

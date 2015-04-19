@@ -10,7 +10,7 @@ FLATPAGES_EXTENSION = '.md'
 
 app = Flask(__name__)
 app.config.from_object(__name__)
-pages = FlatPages(app)
+flatpages = FlatPages(app)
 freezer = Freezer(app)
 
 '''
@@ -27,25 +27,25 @@ def index():
         print repr(p.meta)
     print "------"
     '''
-    return render_template('index.html', pages=pages)
+    return render_template('index.html', flatpages=flatpages)
 
 
 @app.route('/<path:path>/')
 def page(path):
-    page = pages.get_or_404(path)
+    page = flatpages.get_or_404(path)
     return render_template('page.html', page=page)
 
 
 @app.route('/tag/<string:tag>/')
 def tag(tag):
-    tagged = [p for p in pages if tag in p.meta.get('tags', [])]
-    return render_template('tag.html', pages=tagged, tag=tag)
+    tagged = [p for p in flatpages if tag in p.meta.get('tags', [])]
+    return render_template('tag.html', flatpages=tagged, tag=tag)
 
 
 @app.route('/tags/')
 def tags():
     tags_list = []
-    for p in pages:
+    for p in flatpages:
         if p.meta['public']:
             page_tags = p.meta.get('tags', [])
             for t in page_tags:
@@ -56,8 +56,6 @@ def tags():
 
 if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == "build":
-        app.debug = True
-        app.testing = True
         freezer.freeze()
     else:
         app.run(port=8000)
