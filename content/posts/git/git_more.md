@@ -1,4 +1,5 @@
 title: Git cheatsheet
+slug: git-cheatsheet
 date: 2015-04-18
 tags: [git]
 published: 2015-04-08

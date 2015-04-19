@@ -1,4 +1,5 @@
 title: siege study notes
+slug: siege-study-notes
 date: 2015-04-18
 tags: [siege, ops]
 published: 2015-04-18

@@ -1,17 +1,17 @@
-{% for page in flatpages %}
+{% for post in posts %}
 
-    {% if page.meta.public == True %}
+    {% if post.meta.public == True %}
     <hr>
 
     <div class="post-preview">
 
-        <h2 class="post-title"> {{ page.title }} </h2>
-        <h3 class="post-subtitle"> <a href="{{ url_for("page", path=page.path) }}"> {{ page.meta.summary }} </a> </h3>
-        <p class="post-meta">Published on {{ page.meta.published.strftime('%Y/%m/%d') }}
-            {% if page.meta.tags|length %}
+        <h2 class="post-title"> {{ post.title }} </h2>
+        <h3 class="post-subtitle"> <a href="{{ url_for("post", slug=post.slug) }}"> {{ post.meta.summary }} </a> </h3>
+        <p class="post-meta">Published on {{ post.meta.published.strftime('%Y/%m/%d') }}
+            {% if post.meta.tags|length %}
                 , under <b>tags:</b>
-                {% for page_tag in page.meta.tags %}
-                <a href="{{ url_for("tag", tag=page_tag) }}"> <b>{{ page_tag }}</b> </a>
+                {% for post_tag in post.meta.tags %}
+                <a href="{{ url_for("tag", tag=post_tag) }}"> <b>{{ post_tag }}</b> </a>
                 {% endfor %}
             {% endif %}
         </p>

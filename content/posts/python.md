@@ -1,8 +1,9 @@
 title: python study notes
+slug: python-study-notes
 date: 2015-04-18
 tags: [python, nose]
 published: 2015-04-18
-summary: My python study notes, for future reference. 
+summary: My python study notes, for future reference.
 public: yes
 
 NOSE:
