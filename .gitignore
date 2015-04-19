@@ -5,4 +5,5 @@
 virtualenv/
 build/
 tmp/
+.venv/
 
