@@ -30,6 +30,18 @@ def index():
     return render_template('index.html', posts=posts)
 
 
+@app.route('/pages/<name>/')
+def page(name):
+    """ 
+    For non-blogpost type pages, e.g. About.
+    They serve for the purpose of being specifically linked, for example, 
+    on the site menu or other places.
+    """
+    path = '{}/{}'.format(PAGE_DIR, name)
+    page = flatpages.get_or_404(path)
+    return render_template('page.html', page=page)
+
+
 @app.route('/posts/<slug>/')
 def post(slug):
     """ For posts only. """
